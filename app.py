@@ -16,7 +16,7 @@ mail = Mail(app)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', template_folder='.')
 
 @app.route('/contact', methods=['POST'])
 def contact():
@@ -31,7 +31,7 @@ def contact():
         msg.body = f"Nombre: {name}\nEmail: {email}\nMensaje: {message}"
         mail.send(msg)
         
-        return render_template('index.html', success=True)
+        return render_template('index.html', template_folder='.', success=True)
 
 if __name__ == '__main__':
     app.run(host=app.config['HOST'], port=app.config['PORT'], debug=app.config['DEBUG'])
