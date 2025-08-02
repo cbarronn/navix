@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAVIX - Soluciones Tecnológicas Innovadoras</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#inicio" style="padding: 10px 0;">
+                <img src="{{ url_for('static', filename='images/logonavix2.png') }}" alt="NAVIX" style="height: 120px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container text-center py-5">
+            <h1 class="display-4 fw-bold">
+                <span class="dynamic-text">Transformamos tu negocio con</span>
+                <span class="text-rotate">
+                    <span>tecnología</span>
+                    <span>soluciones ERP</span>
+                    <span>automatización</span>
+                    <span>innovación digital</span>
+                </span>
+            </h1>
+            <p class="lead">Soluciones integrales en IT para el crecimiento de tu empresa</p>
+            <a href="#contacto" class="btn btn-primary btn-lg">Contactanos</a>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Nuestros Servicios</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <i class="fas fa-server fa-3x mb-3"></i>
+                        <h3>ERP Dynamics NAV</h3>
+                        <p>Implementación y personalización de soluciones ERP para optimizar tus procesos empresariales.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <i class="fas fa-robot fa-3x mb-3"></i>
+                        <h3>Automatización</h3>
+                        <p>Soluciones de automatización para aumentar la eficiencia y reducir costos operativos.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <i class="fas fa-code fa-3x mb-3"></i>
+                        <h3>Desarrollo de Software</h3>
+                        <p>Desarrollo a medida de aplicaciones empresariales y soluciones digitales.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <i class="fas fa-chart-line fa-3x mb-3"></i>
+                        <h3>Transformación Digital</h3>
+                        <p>Asesoramiento y ejecución de proyectos de transformación digital.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <i class="fas fa-laptop fa-3x mb-3"></i>
+                        <h3>Venta de Equipo</h3>
+                        <p>Soluciones tecnológicas y hardware empresarial de última generación.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section id="nosotros" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">¿Quiénes somos?</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <p class="lead">Somos Navix Tech, una empresa especializada en soluciones tecnológicas con más de 10 años de experiencia en el mercado. Nuestro equipo de expertos está comprometido con la excelencia y la innovación constante.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="stat-card">
+                                <h3>10+</h3>
+                                <p>Años de experiencia</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="stat-card">
+                                <h3>100+</h3>
+                                <p>Proyectos exitosos</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="stat-card">
+                                <h3>50+</h3>
+                                <p>Clientes satisfechos</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="stat-card">
+                                <h3>20+</h3>
+                                <p>Especialistas certificados</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Contáctanos</h2>
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <form method="POST" action="{{ url_for('contact') }}">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" name="name" placeholder="Nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
+                    </form>
+                    {% if success %}
+                    <div class="alert alert-success mt-3">
+                        ¡Mensaje enviado exitosamente!
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container text-center">
+            <p>&copy; 2025 Navix. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
