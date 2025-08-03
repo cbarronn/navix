@@ -1,4 +1,12 @@
+import socket
+
 class Config:
     DEBUG = True
-    PORT = 8081  # Cambiamos el puerto a uno que no requiera privilegios de root
+    
+    # Obtener un puerto disponible dinámicamente
+    s = socket.socket()
+    s.bind(('localhost', 0))
+    PORT = s.getsockname()[1]
+    s.close()
+    
     HOST = '0.0.0.0'  # Accesible por IP
