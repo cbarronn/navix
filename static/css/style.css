@@ -9,6 +9,7 @@
     --hero-bg: #f8f9fa;
     --text-dark: #2c3e50;
     --text-gray: #6c757d;
+    --logo-height: 80px;
 }
 
 /* Texto Rotativo */
@@ -56,13 +57,13 @@ body {
 
 /* Header */
 .header {
-    background-color: var(--navbar-bg);
+    background-color: transparent;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 1rem 0;
 }
 
 .navbar {
-    background-color: var(--navbar-bg) !important;
+    background-color: transparent !important;
     padding: 1rem 0;
     margin-bottom: 0;
 }
@@ -72,7 +73,7 @@ body {
 }
 
 .navbar-brand img {
-    height: 60px;
+    height: var(--logo-height);
     width: auto;
     transition: transform 0.3s ease;
 }
@@ -140,6 +141,18 @@ body {
     background-color: var(--hero-bg);
     padding: 5rem 0;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
 
 .hero h1 {
@@ -147,6 +160,8 @@ body {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     font-weight: 700;
+    position: relative;
+    z-index: 1;
 }
 
 .hero p {
@@ -155,6 +170,8 @@ body {
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.6;
+    position: relative;
+    z-index: 1;
 }
 
 /* Service Cards */
