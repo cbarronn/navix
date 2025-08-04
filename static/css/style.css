@@ -54,11 +54,27 @@ body {
 .header {
     background-color: #2c3e50;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
 }
 
 .navbar {
     background-color: #2c3e50 !important;
     padding: 1rem 0;
+    margin-bottom: 0;
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
+.navbar-brand img {
+    height: 60px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1);
 }
 
 .navbar-brand img {
@@ -100,13 +116,24 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    min-height: 60vh;
-    color: white;
-    display: flex;
-    align-items: center;
+    background-color: #f8f9fa;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.hero h1 {
+    color: #2c3e50;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero p {
+    color: #6c757d;
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
 /* Service Cards */
